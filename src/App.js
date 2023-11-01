@@ -42,17 +42,17 @@ function App() {
                 <input checked={selected.includes(image)} onChange={(e) => handleSelect(e, image)} className="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input" />
               </div>
               <div className='mx-1 mb-4 card shadow'>
-                <img src={image} style={{ height: '500px', width: '500px' }} alt="" />
+                <img src={image} style={{ height: images.length ? '100%' : '500px', width: 'auto' }} alt="" />
               </div>
             </div>
           ))
         }
-        <form className='col-md-3 bg-light border'>
+        <form className='col-md-3'>
           <div className="custom-file d-flex align-items-center justify-content-center">
             <div>
-              <input style={{ height: '240px', width: '100%' }} onChange={handleImage} type="file" className="custom-file-input" id="imageUpload" accept="image/*" />
-              <label style={{ height: '240px', width: '100%' }} className="custom-file-label" htmlFor="imageUpload">
-                Choose image
+              <input style={{ height: '240px', width: '100%', position: 'absolute' }} onChange={handleImage} type="file" className="custom-file-input " id="imageUpload" accept="image/*" />
+              <label style={{ height: '300px', width: '240px' }} className="custom-file-label card text-center d-flex align-items-center justify-content-center shadow" htmlFor="imageUpload">
+                <span className='fw-bold'> Choose image</span>
               </label>
             </div>
           </div>
